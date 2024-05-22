@@ -55,9 +55,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-
+header img{
+    width: 25%;
+}
 nav {
     grid-area: nav;
     background: var(--purpura);
@@ -76,7 +77,14 @@ footer {
     grid-area: footer;
     background: var(--purpura);
 }
-
+.logo-span{
+    animation-name: winter;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
 .links {
     display: flex;
     flex-direction: column;
@@ -145,7 +153,6 @@ footer {
     object-fit: cover;
 }
 
-
 .cover-container .cover-description {
     position: absolute;
     top: 0;
@@ -185,8 +192,19 @@ footer {
 .cover-container:hover .cover-description {
     left: 0;
 }
-
-#logo-texto-min{
+.rss{
+    text-align: center;
+    font-size: 10px;
+    margin: 8px;
+}
+.rss a{
+    color: var(--blanco-humo);
+    padding: 2px;
+}
+.rss a:hover{
+    color: var(--rosa-morado);
+}
+#logo-texto-min {
     display: none;
 }
 
@@ -204,7 +222,9 @@ footer {
             "nav main"
             "nav footer";
     }
-
+    header img{
+        width: 40%;
+    }
     main {
         justify-content: flex-start;
         margin-top: 20px;
@@ -226,17 +246,18 @@ footer {
         object-fit: cover;
 
     }
-    .links{
+
+    .links {
         margin-top: 24px;
     }
-    #logo-texto-max{
+
+    #logo-texto-max {
         display: none;
     }
-    #logo-texto-min{
-        display:block;
+
+    #logo-texto-min {
+        display: block;
     }
-
-
 }
 
 /* Desktop */
@@ -248,7 +269,9 @@ footer {
             "nav main"
             "nav footer";
     }
-
+    header img{
+        width: 40%;
+    }
     main {
         justify-content: flex-start;
         margin-top: 20px;
@@ -270,14 +293,23 @@ footer {
         object-fit: cover;
 
     }
-    .links{
+
+    .links {
         margin-top: 24px;
     }
-    #logo-texto-max{
+
+    #logo-texto-max {
         display: none;
     }
-    #logo-texto-min{
-        display:block;
+
+    #logo-texto-min {
+        display: block;
     }
 
+}
+
+@keyframes winter {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+    
 }
