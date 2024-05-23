@@ -24,7 +24,7 @@
 * {
     margin: 0;
     padding: 0;
-
+    scroll-behavior: smooth;
 }
 
 body {
@@ -93,18 +93,20 @@ footer {
     grid-area: footer;
     background: var(--purpura);
 }
+
 h2 {
     text-align: center;
-    margin: 1rem;
+    margin-top: 1rem;
 }
+
 .logo-span{
     animation-name: winter;
     animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    
 }
+
 .links {
     display: flex;
     flex-direction: column;
@@ -117,7 +119,9 @@ h2 {
 .links a {
     text-decoration: none;
     color: var(--blanco-humo);
-
+}
+.links a:hover {
+    font-weight: 800;
 }
 
 .underline {
@@ -143,7 +147,6 @@ h2 {
 }
 
 .container {
-
     margin: 1em;
     max-width: 350px;
 
@@ -191,11 +194,20 @@ h2 {
 }
 
 .cover-description button {
+    cursor: pointer;
     margin: 16px;
-    padding: 4px;
-    background: var(--purpura);
+    padding: 1rem;
+    background-color: transparent;
+    border:1px solid var(--gris-lila);
     color: var(--blanco-humo);
 }
+.cover-description button:hover {
+    font-weight: 800;
+    background-color: var(--violeta-gris);
+    border:1px solid var(--lavanda-oscuro);
+    color: var(--blanco-humo);
+}
+
 
 .cover-container:hover img {
     transform: translateX(-100%);
@@ -280,7 +292,12 @@ h2 {
 
     .cover-container img {
         object-fit: cover;
+    }
 
+    .cover-description p {
+        text-align: center;
+        margin: 1px 6px;
+        font-size: .8em;
     }
 
     .links {
