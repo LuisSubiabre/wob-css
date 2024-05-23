@@ -235,7 +235,11 @@ h2 {
     margin: 1em;
     max-width: 350px;
 }
+#biografia p{
+    text-align: justify;
+    margin: 1em;
 
+}
 #biografia img{
     max-width: 150px;
     border-radius: 50%;
@@ -250,6 +254,23 @@ h2 {
     justify-content: center;
     margin: 2rem;
 }
+.nightmares {
+    animation-name: nightmares;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#conciertos {
+    margin: 1em;
+    max-width: 350px;
+}
+#conciertos p{
+    text-align: justify;
+    margin: 1em;
+
+}
 
 /* Tablet */
 @media (min-width: 575px) {
@@ -259,13 +280,6 @@ h2 {
             "head main"
             "nav main"
             "nav footer";
-    }
-    header {
-        animation-name: barra-lateral;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
     }
     header img{
         width: 40%;
@@ -314,6 +328,9 @@ h2 {
     }
     .bio {
         margin: 0 1.5rem;
+    }
+    #conciertos {
+        max-width: 768px;
     }
 }
 
@@ -375,9 +392,8 @@ h2 {
         align-items: center;
 
     }
-    .borde-header-bottom{
-        animation-name: barra-lateral;
-
+    #conciertos {
+        max-width: 1200px;
     }
 
 }
@@ -393,15 +409,16 @@ h2 {
     }
     
 }
-@keyframes glowing {
+@keyframes nightmares {
     0% {
-        background-position: 0 0;
+        color: var(--violeta-gris);
+
     }
     50% {
-        background-position: 400% 0;
+        color: var(--gris-lila);
     }
     100% {
-        background-position: 0 0;
+        color: var(--rosa-morado);
     }
 
 }
