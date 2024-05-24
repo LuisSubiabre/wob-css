@@ -272,9 +272,43 @@ h2 {
 #conciertos p{
     text-align: justify;
     margin: 1em;
-
 }
 
+#contacto {
+    margin: 1em 0 2em 0;
+    max-width: 350px;
+}
+.contacto-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 1em 0;
+}
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid violet;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--violeta-gris)
+  }
+  
 /* Tablet */
 @media (min-width: 575px) {
     #page {
@@ -332,9 +366,11 @@ h2 {
     .bio {
         margin: 0 1.5rem;
     }
-    #conciertos {
+    #conciertos, #contacto {
         max-width: 768px;
+        width: 80%;
     }
+
 }
 
 /* Desktop */
@@ -395,8 +431,9 @@ h2 {
         align-items: center;
 
     }
-    #conciertos {
+    #conciertos, #contacto {
         max-width: 1200px;
+        width: 80%;
     }
 
 }
